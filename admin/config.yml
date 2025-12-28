@@ -3,6 +3,9 @@ backend:
   repo: devweebstudio-crypto/my-blog
   branch: main
 
+# IMPORTANT: fixes blank white screen
+local_backend: true
+
 media_folder: "images"
 public_folder: "/images"
 
@@ -18,3 +21,4 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
