@@ -1,16 +1,28 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <title>Admin Panel</title>
-
-  <!-- Decap CMS -->
-  <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
 <body>
-  <!-- REQUIRED ROOT ELEMENT -->
+  <!-- CMS ROOT -->
   <div id="nc-root"></div>
+
+  <!-- LOAD CMS AFTER BODY -->
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
+
+  <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
+
+  <script>
+    CMS.init({
+      config: "/my-blog/admin/config.yml"
+    });
+  </script>
 </body>
 </html>
+
 
